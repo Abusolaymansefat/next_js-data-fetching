@@ -24,10 +24,15 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Nabvar></Nabvar>
-        <main className="h-screen h-max-[800px]">
-          {children}
-        </main>
-        <footer className="text-center bg-slate-700"> Awesome next js project</footer>
+        <main className="min-h-screen px-4 py-8">{children}</main>
+        <footer className="bg-slate-800 text-white py-6 mt-10">
+          <div className="max-w-6xl mx-auto text-center">
+            <p className="text-lg font-medium">🚀 Awesome Next.js Project</p>
+            <p className="text-sm text-gray-300 mt-2">
+              © {new Date().getFullYear()} All rights reserved.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );

@@ -27,17 +27,27 @@ export default function ServicesDetailPage({ params }) {
 
   const id = params?.id;
   const singleData = data.find((d) => d._id === id);
-
-  return (
-    <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">Service Detail</h1>
-      <img
-        src={singleData.services_image}
-        alt={singleData.services_name}
-        className="w-full h-64 object-cover rounded mb-4"
-      />
-      <h2 className="text-2xl font-semibold mb-2">{singleData.services_name}</h2>
-      <p className="text-gray-700">{singleData.services_description}</p>
-    </div>
-  );
+  if (singleData) {
+    return (
+      <div className="max-w-3xl mx-auto p-6">
+        <h1 className="text-3xl font-bold mb-4">Service Detail</h1>
+        <img
+          src={singleData.services_image}
+          alt={singleData.services_name}
+          className="w-full h-64 object-cover rounded mb-4"
+        />
+        <h2 className="text-2xl font-semibold mb-2">
+          {singleData.services_name}
+        </h2>
+        <p className="text-gray-700">{singleData.services_description}</p>
+      </div>
+    );
+  }
+  else {
+    return (
+      <>
+      <p>NOT FOUND SERVIC</p>
+      </>
+    )
+  }
 }
