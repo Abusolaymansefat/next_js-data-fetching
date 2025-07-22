@@ -12,7 +12,7 @@ const robotoFont = Roboto({
 
 export const metadata = {
   title: "ALL Meals ",
-  description: "Meals loaded from MealDB API ",
+  description: "Meals loaded from MealDB API ", 
 };
 
 export default async function MealsPage({ searchParams }) {
