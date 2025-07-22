@@ -23,8 +23,11 @@ export default function Nabvar() {
             <Link href="/meals">
               <li>Meals </li>
             </Link>
-            <Link href="/about">
-              <li>About</li>
+            <Link href="/products">
+              <li>Products</li>
+            </Link>
+            <Link href="/products/add">
+              <li>Add Product </li>
             </Link>
           </ul>
         </nav>
